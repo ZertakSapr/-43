@@ -1,0 +1,96 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:_43.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
+        x:Class="_43.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="_43">
+	<Grid ShowGridLines="True"
+		  RowDefinitions="60, *">
+		<DockPanel Grid.Row="0"
+					Background="DarkGoldenrod"
+				   HorizontalAlignment="Stretch"
+					VerticalAlignment="Top">
+			<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Left">
+
+				<TextBlock Margin="0 21">Home</TextBlock>
+				<TextBlock Margin="20 21">About</TextBlock>
+				<TextBlock Margin="15 21">Blog's main topic 1</TextBlock>
+				<TextBlock Margin="15 21">Blog's main topic 2</TextBlock>
+				<TextBlock Margin="15 21">Blog's main topic 3</TextBlock>
+				<TextBlock Margin="15 21">Associated blogs</TextBlock>
+
+
+
+			</StackPanel>
+			<StackPanel HorizontalAlignment="Right"
+						Grid.Row="0"
+
+				>
+				<TextBlock Margin="0 19 10 5">RSS</TextBlock>
+			</StackPanel>
+		</DockPanel>
+		<Grid Grid.Row="1"
+			ShowGridLines="True"
+			  RowDefinitions="*,21"
+			  ColumnDefinitions="*,300">
+			<DockPanel Grid.Row="1"
+					   HorizontalAlignment="Stretch"
+					VerticalAlignment="Top">
+				<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Left">
+					<TextBlock Margin=" 1">Tags:</TextBlock>
+					<TextBlock Margin="1 1">Tag1</TextBlock>
+					<TextBlock Margin="1 1">Tag2</TextBlock>
+					<TextBlock Margin="1 1">Tag3</TextBlock>
+				</StackPanel>
+
+				<StackPanel Orientation="Horizontal"
+					HorizontalAlignment="Right"
+							Grid.Row="0">
+					<TextBlock Margin="0">Rate this article</TextBlock>
+					<TextBlock Margin="15 1 2 0">4/5</TextBlock>
+
+				</StackPanel>
+			</DockPanel>
+			<DockPanel Grid.Column="1">
+				<StackPanel Orientation="Vertical"
+					HorizontalAlignment="Left">
+					<TextBlock Margin="12" TextWrapping="Wrap">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi..."</TextBlock>
+
+					<TextBlock  TextDecorations="Underline" Margin="240 0 0 10">"More"</TextBlock>
+					<TextBlock   Margin="215 0 0 0">"Yesterday"</TextBlock>
+					<TextBlock Margin="12" TextWrapping="Wrap">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi..."</TextBlock>
+
+					<TextBlock  TextDecorations="Underline" Margin="240 0 0 10">"More"</TextBlock>
+					<TextBlock   Margin="200 0 0 0">"1 week ago"</TextBlock>
+				</StackPanel>
+			</DockPanel>
+			<DockPanel Grid.Column="0"
+					   HorizontalAlignment="Stretch"
+					VerticalAlignment="Top">
+				<StackPanel Orientation="Vertical"
+					HorizontalAlignment="Left">
+					<TextBlock Margin="12" TextWrapping="Wrap">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique, massa fringilla sagittis pretium, lacus ligula placerat leo, non iaculis nisl nunc eu eros. Integer sollicitudin ex in nisi maximus ullamcorper. Cras convallis ex et semper semper. Aliquam et pulvinar quam, nec hendrerit sem. Integer laoreet velit et magna faucibus maximus. Fusce vitae egestas sem. Nam sit amet massa eros. Aenean in imperdiet erat. Pellentesque quis justo in leo pulvinar accumsan. Donec ultrices gravida sem, vel scelerisque leo maximus nec.
+Nam at ligula non magna imperdiet porta. Aenean purus augue, elementum ut neque ac, facilisis luctus massa. Praesent sed risus sed metus lacinia placerat sit amet a felis. Quisque lacinia tellus vitae rutrum porta. Nulla ultricies, quam nec egestas bibendum, nunc sem tristique erat, vitae bibendum ligula eros id enim. Quisque dapibus, felis mattis semper faucibus, augue elit dignissim massa, quis faucibus dui nibh vel erat. Curabitur sit amet felis felis. In a dui eget ipsum hendrerit accumsan ut dignissim justo. Integer luctus tortor quis maximus rutrum. Ut egestas diam ut tempor egestas. Cras volutpat, enim non lacinia ultrices, metus leo fermentum enim, ac feugiat magna lectus eu erat. Curabitur a ex eget mauris condimentum maximus vitae faucibus magna. Phasellus euismod aliquet dapibus."
+					</TextBlock>
+					<Image Margin="0"  Height="100" Width="100"  Source="resm:Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png?assembly=Avalonia.Skia"> </Image>
+
+				</StackPanel>
+				
+
+			</DockPanel>
+		</Grid>
+
+	</Grid>
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+
+
+</Window>
